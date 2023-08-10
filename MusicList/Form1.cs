@@ -82,7 +82,7 @@ namespace MusicList
         private void button5_Click(object sender, EventArgs e)
         {
             musicBindingSource.DataSource = from item in musics
-                                       where item.Num < 10 && item.Num > 5
+                                       where item.Num < 11 && item.Num > 5
                                        select item;
         }
     }
