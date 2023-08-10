@@ -85,5 +85,11 @@ namespace MusicList
                                        where item.Num < 11 && item.Num > 5
                                        select item;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            musicBindingSource.DataSource = from item in musics
+                                            select item;
+        }
     }
 }

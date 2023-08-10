@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.numDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstmusicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +37,11 @@
             this.secondmusicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.secondartistDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.musicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,53 @@
             this.dataGridView1.Size = new System.Drawing.Size(793, 530);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.BindingContextChanged += new System.EventHandler(this.Form1_Load);
+            // 
+            // numDataGridViewTextBoxColumn
+            // 
+            this.numDataGridViewTextBoxColumn.DataPropertyName = "Num";
+            this.numDataGridViewTextBoxColumn.HeaderText = "Num";
+            this.numDataGridViewTextBoxColumn.Name = "numDataGridViewTextBoxColumn";
+            this.numDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstmusicDataGridViewTextBoxColumn
+            // 
+            this.firstmusicDataGridViewTextBoxColumn.DataPropertyName = "First_music";
+            this.firstmusicDataGridViewTextBoxColumn.HeaderText = "First_music";
+            this.firstmusicDataGridViewTextBoxColumn.Name = "firstmusicDataGridViewTextBoxColumn";
+            this.firstmusicDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstartistDataGridViewTextBoxColumn
+            // 
+            this.firstartistDataGridViewTextBoxColumn.DataPropertyName = "First_artist";
+            this.firstartistDataGridViewTextBoxColumn.HeaderText = "First_artist";
+            this.firstartistDataGridViewTextBoxColumn.Name = "firstartistDataGridViewTextBoxColumn";
+            this.firstartistDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // secondmusicDataGridViewTextBoxColumn
+            // 
+            this.secondmusicDataGridViewTextBoxColumn.DataPropertyName = "Second_music";
+            this.secondmusicDataGridViewTextBoxColumn.HeaderText = "Second_music";
+            this.secondmusicDataGridViewTextBoxColumn.Name = "secondmusicDataGridViewTextBoxColumn";
+            this.secondmusicDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // secondartistDataGridViewTextBoxColumn
+            // 
+            this.secondartistDataGridViewTextBoxColumn.DataPropertyName = "Second_artist";
+            this.secondartistDataGridViewTextBoxColumn.HeaderText = "Second_artist";
+            this.secondartistDataGridViewTextBoxColumn.Name = "secondartistDataGridViewTextBoxColumn";
+            this.secondartistDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // musicBindingSource
+            // 
+            this.musicBindingSource.DataSource = typeof(MusicList.Music);
             // 
             // button1
             // 
@@ -119,52 +166,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // numDataGridViewTextBoxColumn
-            // 
-            this.numDataGridViewTextBoxColumn.DataPropertyName = "Num";
-            this.numDataGridViewTextBoxColumn.HeaderText = "Num";
-            this.numDataGridViewTextBoxColumn.Name = "numDataGridViewTextBoxColumn";
-            this.numDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstmusicDataGridViewTextBoxColumn
-            // 
-            this.firstmusicDataGridViewTextBoxColumn.DataPropertyName = "First_music";
-            this.firstmusicDataGridViewTextBoxColumn.HeaderText = "First_music";
-            this.firstmusicDataGridViewTextBoxColumn.Name = "firstmusicDataGridViewTextBoxColumn";
-            this.firstmusicDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstartistDataGridViewTextBoxColumn
-            // 
-            this.firstartistDataGridViewTextBoxColumn.DataPropertyName = "First_artist";
-            this.firstartistDataGridViewTextBoxColumn.HeaderText = "First_artist";
-            this.firstartistDataGridViewTextBoxColumn.Name = "firstartistDataGridViewTextBoxColumn";
-            this.firstartistDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // secondmusicDataGridViewTextBoxColumn
-            // 
-            this.secondmusicDataGridViewTextBoxColumn.DataPropertyName = "Second_music";
-            this.secondmusicDataGridViewTextBoxColumn.HeaderText = "Second_music";
-            this.secondmusicDataGridViewTextBoxColumn.Name = "secondmusicDataGridViewTextBoxColumn";
-            this.secondmusicDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // secondartistDataGridViewTextBoxColumn
-            // 
-            this.secondartistDataGridViewTextBoxColumn.DataPropertyName = "Second_artist";
-            this.secondartistDataGridViewTextBoxColumn.HeaderText = "Second_artist";
-            this.secondartistDataGridViewTextBoxColumn.Name = "secondartistDataGridViewTextBoxColumn";
-            this.secondartistDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // musicBindingSource
-            // 
-            this.musicBindingSource.DataSource = typeof(MusicList.Music);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -177,7 +178,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "3204 김하늘";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).EndInit();
             this.ResumeLayout(false);
